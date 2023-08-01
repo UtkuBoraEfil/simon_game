@@ -30,6 +30,12 @@ $(document).keypress((event) => {
   }
 });
 
+document.addEventListener("touchstart", (e) => {
+  if (first === true) {
+    first = false;
+    setTimeout(() => nextSequence(), 200);
+  }
+});
 $(".btn").click((event) => {
   const { id } = event.target; // DOKUNMAAAAA
   const userChosenColour = id;
